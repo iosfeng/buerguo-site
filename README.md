@@ -1,2 +1,2 @@
-# buerguo-site
-iosfeng.github.io source
+# buerguo.com
+my hexo blog source
