@@ -1,25 +1,28 @@
 # ---------------------------------------------------------------
 #   Site Information And Theme Configuration Settings
-#   language: zh-CN
+language: zh-CN
 # ---------------------------------------------------------------
 
 ## menu 
 menu:
-- page: home
+- page: 首页
   url: /
+  icon: home
+- page: 朝夕
+  url: /zhaoxi
   icon: 
-- page: 前端
-  url: /categories/前端/
+- page: 小加
+  url: /xiaojia
   icon: 
-- page: 后端
-  url: /categories/后端/
+- page: 图片模糊
+  url: /blur
   icon: 
-- page: 工具
-  url: /categories/工具/
+- page: 马赛克
+  url: /mosaic
   icon: 
-- page: 资源
-  url: /categories/资源/
-  icon: 
+- page: 关于我
+  url: /about
+  icon:
 
 ## favicon 
 favicon: /favicon.ico
@@ -62,22 +65,22 @@ notification: |-
 social:
  - name: Github
    icon: git
-   href: //github.com/shenliyang
+   href: //github.com/iosfeng
  - name: 邮箱
    icon: envelope-o
-   href: mailto:snippet@91h5.cc
- - name: 联系QQ
-   icon: qq
-   href: /
- - name: 微博
-   icon: weibo
-   href: /
- - name: QQ群
-   icon: users
-   href: /
- - name: RSS
-   icon: feed
-   href: /atom.xml
+   href: mailto:iosfeng@163.com
+# - name: 联系QQ
+#   icon: qq
+#   href: /
+# - name: 微博
+#   icon: weibo
+#   href: /
+# - name: QQ群
+#   icon: users
+#   href: /
+# - name: RSS
+#   icon: feed
+#   href: /atom.xml
 
 ## 文章分类设置
 cate_config:
@@ -92,13 +95,13 @@ arch_config:
 
 ## 友链设置
 links:
-  - 个人博客: http://www.shenliyang.com
+  - GITHUB: https://github.com/iosfeng
 
 
 # 主题自定义个性化配置
 
 ## 网站宣传语
-branding:
+branding: 一万年太久，只争朝夕。
 
 ## 设置banner背景图片
 banner:
@@ -144,7 +147,7 @@ gitment:
 ### 来必力
 livere: 
   enable: true
-  livere_uid: MTAyMC8zMzA1MS85NjEz
+  livere_uid: MTAyMC8zMzI0MC85Nzk3
 
 ### 友言评论
 uyan:
@@ -160,7 +163,7 @@ disqus:
 ## 网站访问统计
 
 ### 网盟CNZZ统计
-cnzz_analytics: 1263868967
+cnzz_analytics:
 
 ### 百度统计
 baidu_analytics: 
@@ -175,6 +178,6 @@ tencent_analytics:
 baidu_push:
 
 #网站主题配置
-since: 2017
+since: 2018.1.15
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
 version: 1.2.1
