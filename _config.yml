@@ -6,13 +6,13 @@
 title: 朝夕 - 番茄工作法
 subtitle: 时间管理利器
 description:
-author: Tony Feng
+author: Fee
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.buerguo.com
+url: https://www.buerguo.com
 root: /
 #permalink: :year/:month/:day/:title/
 permalink: passages/:title/ # 如果您需要开启评论和文章统计，请修改此配置

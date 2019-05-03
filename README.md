@@ -24,4 +24,11 @@ hexo g -d
 4. 再次发布 *hexo d*
 
 
+### 如果有什么奇怪的问题，请参考如下
+1. `hexo clean`
+2. 删除 **.deploy_git** 文件夹
+3. `hexo g`
+4. 在**public**目录下新增 **CNAME** 文件
+5. 写入自定义域名 **www.buerguo.com**
+6. 再次发布 `hexo d`
 
