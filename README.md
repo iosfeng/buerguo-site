@@ -32,3 +32,14 @@ hexo g -d
 5. 写入自定义域名 **www.buerguo.com**
 6. 再次发布 `hexo d`
 
+```
+hexo clean
+rm -rf .deploy_git/ node_modules/ 
+cnpm i 
+hexo g
+cd public
+touch CNAME
+echo www.buerguo.com >> CNAME
+hexo d
+
+```

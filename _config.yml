@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://www.buerguo.com
 root: /
-#permalink: :year/:month/:day/:title/
+# permalink: :year/:month/:day/:title/
 permalink: passages/:title/ # 如果您需要开启评论和文章统计，请修改此配置
 permalink_defaults:
 
