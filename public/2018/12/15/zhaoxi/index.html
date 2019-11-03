@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因：【WHAT】什么是番茄工作法？番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语p">
+<meta name="keywords" content="时间管理,四象限法则,番茄工作法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="朝夕App">
+<meta property="og:url" content="https:&#x2F;&#x2F;buerguo.com&#x2F;2018&#x2F;12&#x2F;15&#x2F;zhaoxi&#x2F;index.html">
+<meta property="og:site_name" content="FeeStudio">
+<meta property="og:description" content="很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因：【WHAT】什么是番茄工作法？番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语p">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-02T15:00:03.341Z">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://buerguo.com/2018/12/15/zhaoxi/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>朝夕App | FeeStudio</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">FeeStudio</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">享受独立创作的乐趣</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">5</span></a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/iosfeng" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://buerguo.com/2018/12/15/zhaoxi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FengYiyi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FeeStudio">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          朝夕App
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-15 14:29:15" itemprop="dateCreated datePublished" datetime="2018-12-15T14:29:15+08:00">2018-12-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-02 23:00:03" itemprop="dateModified" datetime="2019-11-02T23:00:03+08:00">2019-11-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/App/" itemprop="url" rel="index">
+                    <span itemprop="name">App</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因：</p><h3 id="【WHAT】什么是番茄工作法？"><a href="#【WHAT】什么是番茄工作法？" class="headerlink" title="【WHAT】什么是番茄工作法？"></a>【WHAT】什么是番茄工作法？</h3><p>番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语pomodoro意思就是“番茄”)来将工作和学习时间分为时长25分钟的工作时间(1个“番茄时间”)和时长5分钟的“休息时间”。</p><a id="more"></a>
+
+<h3 id="【WHY】为什么要使用番茄工作法？"><a href="#【WHY】为什么要使用番茄工作法？" class="headerlink" title="【WHY】为什么要使用番茄工作法？"></a>【WHY】为什么要使用番茄工作法？</h3><p>1、面对复杂，望而却步。<br>2、小事忙一天，大事一样没办。<br>3、最后期限，步步紧逼。<br>4、从休息回到工作，心智调整不过来。</p>
+<h3 id="【HOW】如何使用番茄工作法"><a href="#【HOW】如何使用番茄工作法" class="headerlink" title="【HOW】如何使用番茄工作法?"></a>【HOW】如何使用番茄工作法?</h3><p>1、工具<br>番茄工作法的简单易行，体现在方方面面。番茄工作法的工具极其简单，只需要一支钢笔或铅笔、一枚厨房定时器、三张白纸或横格纸。<br>可以为你的办公环境选用任何类型的定时器。可以是机械厨房定时器、沙漏、手机的振动闹铃或者手机APP（当然就是我啦）。</p>
+<p>2、列出“今日待办”清单<br>扭启一个五分钟番茄钟，拿一支笔和一张纸将要办的事项逐项写出，成为“今日待办”清单。也可以将你的“活动清单”里的事项选出填入“今日待办”清单。<br>“活动清单”是你近期要完成的事情，“今日待办”是在时间段限定内的承诺，某件事你今天不打算做，就不要把它写进去。</p>
+<p>3、进入番茄钟<br>一个番茄钟，只做一件事。将你“今日待办”清单里的事情按重要程度分类，选择一件你认为第一重要的，进入番茄钟，在一个番茄钟的25分钟内，只专注于这件事，全力以赴地完成。<br>一件事情你可以预估需要几个番茄钟。一个番茄钟接一个番茄钟，在有限的工作时间内将清单上的事情按重要程度排序逐项完成。</p>
+<p>4、休息<br>一个番茄钟结束后，你应该立即在今日待办表格中画一个“X”做记录，然后进入5分钟的休息时间。<br>休息时，完全放下工作，分身出来，也远离其它任何挑战智力的活动，可以喝水、上厕所、散步，或者闭目养神一会。<br>在每隔25分钟的常规休息之外，番茄工作法会安排时间更长的阶段性休息。可以将4个番茄钟作为一组，4个番茄钟之后，进行15到30分钟的阶段性休息。</p>
+<p>5、记录总结，持续改善<br>结束了一天的工作，要马上进入记录阶段。看看你的“今日待办”清单里，有多少顺利完成，有多少没有完成，反思是什么原因造成没有完成，预估的一件事情需要的番茄钟数是否准确，想想明天的日程表里的事应该更多还是更少。</p>
+<p>使用番茄工作法，并进行记录和总结，可以让你的工作方法和工作效率得到持续的改善。</p>
+<p>番茄工作法不仅适用于工作，也适用于生活中任何事情。将你的时间用一个个番茄钟量化，写文章的番茄钟没有结束，不要拿出手机刷朋友圈。看书的番茄钟没有结束，不要跑到厨房去找零食吃。加班的番茄钟没有结束，不要去想晚上的宵夜去哪里吃。晚上睡前刷微信文章和朋友圈互动，也只给自己一个或两个番茄钟的时间。</p>
+<p>久而久之，习惯成自然，你会发现，你的生活变得高效、自律、简洁明了。</p>
+<p>那恭喜你，你离那个高效、自律、专注的人不远了，你也离你所期望的美好人生不远了。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" rel="tag"># 时间管理</a>
+              <a href="/tags/%E5%9B%9B%E8%B1%A1%E9%99%90%E6%B3%95%E5%88%99/" rel="tag"># 四象限法则</a>
+              <a href="/tags/%E7%95%AA%E8%8C%84%E5%B7%A5%E4%BD%9C%E6%B3%95/" rel="tag"># 番茄工作法</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2018/12/12/private/" rel="next" title="朝夕App隐私权政策">
+                  <i class="fa fa-chevron-left"></i> 朝夕App隐私权政策
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/05/01/private_four_quadrant/" rel="prev" title="小加四象限App隐私权政策">
+                  小加四象限App隐私权政策 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#【WHAT】什么是番茄工作法？"><span class="nav-number">1.</span> <span class="nav-text">【WHAT】什么是番茄工作法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#【WHY】为什么要使用番茄工作法？"><span class="nav-number">2.</span> <span class="nav-text">【WHY】为什么要使用番茄工作法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#【HOW】如何使用番茄工作法"><span class="nav-number">3.</span> <span class="nav-text">【HOW】如何使用番茄工作法?</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="FengYiyi"
+    src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">FengYiyi</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:iosfeng@163.com" title="E-Mail &amp;rarr; mailto:iosfeng@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/ihighlife" title="Weibo &amp;rarr; https:&#x2F;&#x2F;weibo.com&#x2F;ihighlife" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://sxshow.com:4040/dashboard/login" title="http:&#x2F;&#x2F;sxshow.com:4040&#x2F;dashboard&#x2F;login" rel="noopener" target="_blank">Dashboard</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Copyright © 2019 buerugo.com Ltd. All Rights Reserved</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.5.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
+    <script defer src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

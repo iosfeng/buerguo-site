@@ -1,6 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
-node_modules/
-.deploy_git/
-.idea/
-public/
+.DS_Store
+Thumbs.db
 db.json
+*.log
+node_modules/
+.deploy*/
