@@ -19,11 +19,12 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    hostname: new URL('https://www.buerguo.com').hostname,
     root: '/',
     scheme: 'Pisces',
-    version: '7.5.0',
+    version: '7.6.0',
     exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
@@ -31,6 +32,7 @@
     mediumzoom: false,
     lazyload: true,
     pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
     algolia: {
       appID: '',
       apiKey: '',
@@ -40,23 +42,17 @@
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
 </script>
 
-  <meta name="description" content="很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因：【WHAT】什么是番茄工作法？番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语p">
+  <meta name="description" content="很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因： 【WHAT】什么是番茄工作法？番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语">
 <meta name="keywords" content="时间管理,四象限法则,番茄工作法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="朝夕App">
 <meta property="og:url" content="https:&#x2F;&#x2F;www.buerguo.com&#x2F;2018&#x2F;12&#x2F;15&#x2F;zhaoxi&#x2F;index.html">
 <meta property="og:site_name" content="FeeStudio">
-<meta property="og:description" content="很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因：【WHAT】什么是番茄工作法？番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语p">
+<meta property="og:description" content="很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因： 【WHAT】什么是番茄工作法？番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-11-02T15:00:03.000Z">
 <meta name="twitter:card" content="summary">
@@ -69,9 +65,7 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isPost: true
   };
 </script>
 
@@ -152,7 +146,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
 
   </li>
   </ul>
@@ -238,8 +232,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因：</p><h3 id="【WHAT】什么是番茄工作法？"><a href="#【WHAT】什么是番茄工作法？" class="headerlink" title="【WHAT】什么是番茄工作法？"></a>【WHAT】什么是番茄工作法？</h3><p>番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语pomodoro意思就是“番茄”)来将工作和学习时间分为时长25分钟的工作时间(1个“番茄时间”)和时长5分钟的“休息时间”。</p><a id="more"></a>
-
+        <p>很多人都有这样的困惑：时间如白驹过隙，眼睁睁看着时间匆匆从手指头缝中溜走，而自己一天天忙忙碌碌，却没有做出什么有成绩的事情。为什么会这样呢？《番茄工作法》告诉你原因：</p>
+<h3 id="【WHAT】什么是番茄工作法？"><a href="#【WHAT】什么是番茄工作法？" class="headerlink" title="【WHAT】什么是番茄工作法？"></a>【WHAT】什么是番茄工作法？</h3><p>番茄工作法(Pomodoro Technique)是上世纪80年代意大利大学生Francesco Cirillo提出的一种时间管理方法。他使用一个定时器(一开始使用的是厨房中使用的番茄形状闹钟，意大利语pomodoro意思就是“番茄”)来将工作和学习时间分为时长25分钟的工作时间(1个“番茄时间”)和时长5分钟的“休息时间”。</p>
 <h3 id="【WHY】为什么要使用番茄工作法？"><a href="#【WHY】为什么要使用番茄工作法？" class="headerlink" title="【WHY】为什么要使用番茄工作法？"></a>【WHY】为什么要使用番茄工作法？</h3><p>1、面对复杂，望而却步。<br>2、小事忙一天，大事一样没办。<br>3、最后期限，步步紧逼。<br>4、从休息回到工作，心智调整不过来。</p>
 <h3 id="【HOW】如何使用番茄工作法"><a href="#【HOW】如何使用番茄工作法" class="headerlink" title="【HOW】如何使用番茄工作法?"></a>【HOW】如何使用番茄工作法?</h3><p>1、工具<br>番茄工作法的简单易行，体现在方方面面。番茄工作法的工具极其简单，只需要一支钢笔或铅笔、一枚厨房定时器、三张白纸或横格纸。<br>可以为你的办公环境选用任何类型的定时器。可以是机械厨房定时器、沙漏、手机的振动闹铃或者手机APP（当然就是我啦）。</p>
 <p>2、列出“今日待办”清单<br>扭启一个五分钟番茄钟，拿一支笔和一张纸将要办的事项逐项写出，成为“今日待办”清单。也可以将你的“活动清单”里的事项选出填入“今日待办”清单。<br>“活动清单”是你近期要完成的事情，“今日待办”是在时间段限定内的承诺，某件事你今天不打算做，就不要把它写进去。</p>
@@ -266,21 +260,18 @@
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2018/12/12/private/" rel="next" title="朝夕App隐私权政策">
-                  <i class="fa fa-chevron-left"></i> 朝夕App隐私权政策
-                </a>
-            </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-                <a href="/2019/05/01/private_four_quadrant/" rel="prev" title="小加四象限App隐私权政策">
-                  小加四象限App隐私权政策 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/12/12/private/" rel="prev" title="朝夕App隐私权政策">
+      <i class="fa fa-chevron-left"></i> 朝夕App隐私权政策
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/01/private_four_quadrant/" rel="next" title="小加四象限App隐私权政策">
+      小加四象限App隐私权政策 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
   </article>
@@ -293,6 +284,28 @@
 
           </div>
           
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
@@ -323,8 +336,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="site-author-image" itemprop="image" alt="Farmer"
-    src="/images/avatar.png">
+    <img class="site-author-image" itemprop="image" alt="Farmer"
+      src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Farmer</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -333,7 +346,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -342,17 +355,17 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="mailto:iosfeng@163.com" title="E-Mail &amp;rarr; mailto:iosfeng@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+        <a href="mailto:iosfeng@163.com" title="E-Mail → mailto:iosfeng@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/ihighlife" title="Weibo &amp;rarr; https:&#x2F;&#x2F;weibo.com&#x2F;ihighlife" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+        <a href="https://weibo.com/ihighlife" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;ihighlife" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
       </span>
   </div>
 
@@ -395,7 +408,7 @@
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.5.0
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
   </div>
 
         
@@ -407,11 +420,6 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
@@ -447,10 +455,19 @@
 
 
 
-
   
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://www.buerguo.com/2018/12/15/zhaoxi/',]
+      });
+      });
+  </script>
 
 </body>
 </html>

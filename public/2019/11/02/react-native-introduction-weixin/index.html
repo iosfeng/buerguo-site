@@ -19,11 +19,12 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    hostname: new URL('https://www.buerguo.com').hostname,
     root: '/',
     scheme: 'Pisces',
-    version: '7.5.0',
+    version: '7.6.0',
     exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
@@ -31,6 +32,7 @@
     mediumzoom: false,
     lazyload: true,
     pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
     algolia: {
       appID: '',
       apiKey: '',
@@ -40,25 +42,19 @@
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
 </script>
 
-  <meta name="description" content="唠叨两句在公司提效的大背景下，今年6月初，部门的国际化新项目我们通过多方面的对比，技术选型采用react-native为最终的方案，之所以没有采用目前比较火的Flutter。其中的原因我会在以下小节有个简要的说明。项目第一版已接近尾声，到了最后的细节调整阶段。正好借此机会记录下这段时间入坑RN的一些心得体会。">
+  <meta name="description" content="唠叨两句在公司提效的大背景下，今年6月初，部门的国际化新项目我们通过多方面的对比，技术选型采用react-native为最终的方案，之所以没有采用目前比较火的Flutter。其中的原因我会在以下小节有个简要的说明。项目第一版已接近尾声，到了最后的细节调整阶段。正好借此机会记录下这段时间入坑RN的一些心得体会。 心得体会入坑3月有余，幸而有我们前端同学的加持，使我们在第一次使用新技术栈的同时开发如此">
 <meta name="keywords" content="APP iOS Android react-native Flutter 大前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react-native入门实战小结">
 <meta property="og:url" content="https:&#x2F;&#x2F;www.buerguo.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;react-native-introduction-weixin&#x2F;index.html">
 <meta property="og:site_name" content="FeeStudio">
-<meta property="og:description" content="唠叨两句在公司提效的大背景下，今年6月初，部门的国际化新项目我们通过多方面的对比，技术选型采用react-native为最终的方案，之所以没有采用目前比较火的Flutter。其中的原因我会在以下小节有个简要的说明。项目第一版已接近尾声，到了最后的细节调整阶段。正好借此机会记录下这段时间入坑RN的一些心得体会。">
+<meta property="og:description" content="唠叨两句在公司提效的大背景下，今年6月初，部门的国际化新项目我们通过多方面的对比，技术选型采用react-native为最终的方案，之所以没有采用目前比较火的Flutter。其中的原因我会在以下小节有个简要的说明。项目第一版已接近尾声，到了最后的细节调整阶段。正好借此机会记录下这段时间入坑RN的一些心得体会。 心得体会入坑3月有余，幸而有我们前端同学的加持，使我们在第一次使用新技术栈的同时开发如此">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-02T15:02:20.000Z">
+<meta property="og:updated_time" content="2019-12-14T08:14:57.049Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://www.buerguo.com/2019/11/02/react-native-introduction-weixin/">
@@ -69,9 +65,7 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isPost: true
   };
 </script>
 
@@ -152,7 +146,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
 
   </li>
   </ul>
@@ -205,10 +199,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-02 00:00:00 / 修改时间：23:02:20" itemprop="dateCreated datePublished" datetime="2019-11-02T00:00:00+08:00">2019-11-02</time>
+              <time title="创建时间：2019-11-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-11-02T00:00:00+08:00">2019-11-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-14 16:14:57" itemprop="dateModified" datetime="2019-12-14T16:14:57+08:00">2019-12-14</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -232,7 +232,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="唠叨两句"><a href="#唠叨两句" class="headerlink" title="唠叨两句"></a>唠叨两句</h2><p>在公司提效的大背景下，今年6月初，部门的国际化新项目我们通过多方面的对比，技术选型采用react-native为最终的方案，之所以没有采用目前比较火的Flutter。其中的原因我会在以下小节有个简要的说明。项目第一版已接近尾声，到了最后的细节调整阶段。正好借此机会记录下这段时间入坑RN的一些心得体会。</p><a id="more"></a>
+        <h2 id="唠叨两句"><a href="#唠叨两句" class="headerlink" title="唠叨两句"></a>唠叨两句</h2><p>在公司提效的大背景下，今年6月初，部门的国际化新项目我们通过多方面的对比，技术选型采用react-native为最终的方案，之所以没有采用目前比较火的Flutter。其中的原因我会在以下小节有个简要的说明。项目第一版已接近尾声，到了最后的细节调整阶段。正好借此机会记录下这段时间入坑RN的一些心得体会。</p>
 <h2 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h2><p>入坑3月有余，幸而有我们前端同学的加持，使我们在第一次使用新技术栈的同时开发如此大规模的项目，得以保证开发进度的顺利进行。</p>
 <p>在整个项目中使用到的语言包括TypeScript/JavaScript/Objective-C/Java，项目管理、打包、构建工具包括npm/cocoapods/gradle/webpack，至于开发工具方面我更喜欢WebStorm+AndroidStudio+AppCode组合，可以保证开发体验高度一致，开发速度会更快，当然Xcode必不可少。而前端同学更喜欢VSCode，都是可以的。</p>
 <p>react-native来实现项目中所有的业务逻辑，开发速度自然快了许多，使我这个同时开发过iOS和Android项目的人深深体会到了跨平台的好处，再也不会出现同样的功能在iOS侧和Android侧实现两遍而且实现思路还不一样的尴尬场面，在维护时的痛苦不言而喻。</p>
@@ -321,7 +321,7 @@
 </li>
 <li><p>Node/NPM - 项目、包管理</p>
 <ul>
-<li><a href>暂无</a></li>
+<li><a href="">暂无</a></li>
 </ul>
 </li>
 <li><p>热更新</p>
@@ -349,21 +349,18 @@
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2019/05/04/four_quadrant/" rel="next" title="小加四象限App">
-                  <i class="fa fa-chevron-left"></i> 小加四象限App
-                </a>
-            </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/03/private_masaics/" rel="prev" title="马赛克App隐私权政策">
-                  马赛克App隐私权政策 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/04/four_quadrant/" rel="prev" title="小加四象限App">
+      <i class="fa fa-chevron-left"></i> 小加四象限App
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/11/03/private_blur/" rel="next" title="高斯模糊App隐私权政策">
+      高斯模糊App隐私权政策 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
   </article>
@@ -376,6 +373,28 @@
 
           </div>
           
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
@@ -406,8 +425,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="site-author-image" itemprop="image" alt="Farmer"
-    src="/images/avatar.png">
+    <img class="site-author-image" itemprop="image" alt="Farmer"
+      src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Farmer</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -416,7 +435,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -425,17 +444,17 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="mailto:iosfeng@163.com" title="E-Mail &amp;rarr; mailto:iosfeng@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+        <a href="mailto:iosfeng@163.com" title="E-Mail → mailto:iosfeng@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/ihighlife" title="Weibo &amp;rarr; https:&#x2F;&#x2F;weibo.com&#x2F;ihighlife" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+        <a href="https://weibo.com/ihighlife" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;ihighlife" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
       </span>
   </div>
 
@@ -478,7 +497,7 @@
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.5.0
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
   </div>
 
         
@@ -490,11 +509,6 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
@@ -530,10 +544,19 @@
 
 
 
-
   
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://www.buerguo.com/2019/11/02/react-native-introduction-weixin/',]
+      });
+      });
+  </script>
 
 </body>
 </html>

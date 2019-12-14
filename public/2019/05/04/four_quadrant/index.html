@@ -19,11 +19,12 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    hostname: new URL('https://www.buerguo.com').hostname,
     root: '/',
     scheme: 'Pisces',
-    version: '7.5.0',
+    version: '7.6.0',
     exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
@@ -31,6 +32,7 @@
     mediumzoom: false,
     lazyload: true,
     pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
     algolia: {
       appID: '',
       apiKey: '',
@@ -40,23 +42,17 @@
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
 </script>
 
-  <meta name="description" content="由来时间“四象限”法是美国的管理学家科维提出的一个时间管理的理论，把工作按照重要和紧急两个不同的程度进行了划分，基本上可以分为四个“象限”：既紧急又重要(如客户投诉、即将到期的任务、财务危机等)、重要但不紧急(如建立人际关系、人员培训、制订防范措施等)、紧急但不重要(如电话铃声、不速之客、部门会议等)、既不紧急也不重要(如上网、闲谈、邮件、写博客等)。">
+  <meta name="description" content="由来时间“四象限”法是美国的管理学家科维提出的一个时间管理的理论，把工作按照重要和紧急两个不同的程度进行了划分，基本上可以分为四个“象限”：既紧急又重要(如客户投诉、即将到期的任务、财务危机等)、重要但不紧急(如建立人际关系、人员培训、制订防范措施等)、紧急但不重要(如电话铃声、不速之客、部门会议等)、既不紧急也不重要(如上网、闲谈、邮件、写博客等)。 重要观念时间管理理论的一个重要观念是应有重点">
 <meta name="keywords" content="四象限工作法,时间管理,四象限法则">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小加四象限App">
 <meta property="og:url" content="https:&#x2F;&#x2F;www.buerguo.com&#x2F;2019&#x2F;05&#x2F;04&#x2F;four_quadrant&#x2F;index.html">
 <meta property="og:site_name" content="FeeStudio">
-<meta property="og:description" content="由来时间“四象限”法是美国的管理学家科维提出的一个时间管理的理论，把工作按照重要和紧急两个不同的程度进行了划分，基本上可以分为四个“象限”：既紧急又重要(如客户投诉、即将到期的任务、财务危机等)、重要但不紧急(如建立人际关系、人员培训、制订防范措施等)、紧急但不重要(如电话铃声、不速之客、部门会议等)、既不紧急也不重要(如上网、闲谈、邮件、写博客等)。">
+<meta property="og:description" content="由来时间“四象限”法是美国的管理学家科维提出的一个时间管理的理论，把工作按照重要和紧急两个不同的程度进行了划分，基本上可以分为四个“象限”：既紧急又重要(如客户投诉、即将到期的任务、财务危机等)、重要但不紧急(如建立人际关系、人员培训、制订防范措施等)、紧急但不重要(如电话铃声、不速之客、部门会议等)、既不紧急也不重要(如上网、闲谈、邮件、写博客等)。 重要观念时间管理理论的一个重要观念是应有重点">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-11-02T14:59:43.000Z">
 <meta name="twitter:card" content="summary">
@@ -69,9 +65,7 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isPost: true
   };
 </script>
 
@@ -152,7 +146,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
 
   </li>
   </ul>
@@ -238,7 +232,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h2><p>时间“四象限”法是美国的管理学家科维提出的一个时间管理的理论，把工作按照重要和紧急两个不同的程度进行了划分，基本上可以分为四个“象限”：既紧急又重要(如客户投诉、即将到期的任务、财务危机等)、重要但不紧急(如建立人际关系、人员培训、制订防范措施等)、紧急但不重要(如电话铃声、不速之客、部门会议等)、既不紧急也不重要(如上网、闲谈、邮件、写博客等)。</p><a id="more"></a>
+        <h2 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h2><p>时间“四象限”法是美国的管理学家科维提出的一个时间管理的理论，把工作按照重要和紧急两个不同的程度进行了划分，基本上可以分为四个“象限”：既紧急又重要(如客户投诉、即将到期的任务、财务危机等)、重要但不紧急(如建立人际关系、人员培训、制订防范措施等)、紧急但不重要(如电话铃声、不速之客、部门会议等)、既不紧急也不重要(如上网、闲谈、邮件、写博客等)。</p>
 <h2 id="重要观念"><a href="#重要观念" class="headerlink" title="重要观念"></a>重要观念</h2><p>时间管理理论的一个重要观念是应有重点地把主要的精力和时间集中地放在处理那些重要但不紧急的工作上，这样可以做到未雨绸缪，防患于未然。在人们的日常工作中，很多时候往往有机会去很好地计划和完成一件事。但常常却又没有及时地去做，随着时间的推移，造成工作质量的下降。因此，应把主要的精力有重点地放在重要但不紧急这个“象限”的事务上是必要的。要把精力主要放在重要但不紧急的事务处理上，需要很好地安排时间。一个好的方法是建立预约。建立了预约，自己的时间才不会被别人所占据，从而有效地开展工作。</p>
 <h2 id="关系处理"><a href="#关系处理" class="headerlink" title="关系处理"></a>关系处理</h2><p>按处理顺序划分：先是既紧急又重要的，接着是重要但不紧急的，再到紧急但不重要的，最后才是既不紧急也不重要的。“四象限”法的关键在于第二和第三类的顺序问题，必须非常小心区分。另外，也要注意划分好第一和第三类事，都是紧急的，分别就在于前者能带来价值，实现某种重要目标，而后者不能。</p>
 <h2 id="执行策略"><a href="#执行策略" class="headerlink" title="执行策略"></a>执行策略</h2><ul>
@@ -263,21 +257,18 @@
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2019/05/01/private_four_quadrant/" rel="next" title="小加四象限App隐私权政策">
-                  <i class="fa fa-chevron-left"></i> 小加四象限App隐私权政策
-                </a>
-            </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/02/react-native-introduction-weixin/" rel="prev" title="react-native入门实战小结">
-                  react-native入门实战小结 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/01/private_four_quadrant/" rel="prev" title="小加四象限App隐私权政策">
+      <i class="fa fa-chevron-left"></i> 小加四象限App隐私权政策
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/11/02/react-native-introduction-weixin/" rel="next" title="react-native入门实战小结">
+      react-native入门实战小结 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
   </article>
@@ -290,6 +281,28 @@
 
           </div>
           
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
@@ -320,8 +333,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="site-author-image" itemprop="image" alt="Farmer"
-    src="/images/avatar.png">
+    <img class="site-author-image" itemprop="image" alt="Farmer"
+      src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Farmer</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -330,7 +343,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -339,17 +352,17 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="mailto:iosfeng@163.com" title="E-Mail &amp;rarr; mailto:iosfeng@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+        <a href="mailto:iosfeng@163.com" title="E-Mail → mailto:iosfeng@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/ihighlife" title="Weibo &amp;rarr; https:&#x2F;&#x2F;weibo.com&#x2F;ihighlife" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+        <a href="https://weibo.com/ihighlife" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;ihighlife" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
       </span>
   </div>
 
@@ -392,7 +405,7 @@
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.5.0
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
   </div>
 
         
@@ -404,11 +417,6 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
@@ -444,10 +452,19 @@
 
 
 
-
   
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://www.buerguo.com/2019/05/04/four_quadrant/',]
+      });
+      });
+  </script>
 
 </body>
 </html>
