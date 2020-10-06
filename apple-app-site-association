@@ -1,0 +1,15 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "9LA84498JK.com.buerguo.zhaoxi",
+                "paths": [ "*" ]
+            },
+            {
+                "appID": "RA3246R8CT.com.buerguo.zhaoxi",
+                "paths": [ "*" ]
+            }
+        ]
+    }
+}

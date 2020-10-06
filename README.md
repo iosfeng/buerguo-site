@@ -40,6 +40,7 @@ hexo g
 cd public
 touch CNAME
 echo www.buerguo.com >> CNAME
+cp apple-app-site-association public
 hexo d
 
 ```
