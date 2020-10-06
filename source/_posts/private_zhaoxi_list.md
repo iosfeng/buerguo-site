@@ -1,7 +1,7 @@
 ---
-title: 朝夕清单App隐私权政策
+title: 朝夕清单App隐私协议
 date: 2020-10-01 10:29:08
-categories: 隐私权政
+categories: 隐私协议
 tags:
 - 隐私条款
 - 隐私权政策
